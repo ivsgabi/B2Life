@@ -4,11 +4,11 @@ import "gorm.io/gorm"
 
 type User struct {
 	gorm.Model
-	ID                 uint                `gorm:"primaryKey;autoIncrement:true" json:id`
-	Username           string              `gorm:"unique;not null" json:username`
-	Email              string              `gorm:"unique;not null" json:"email"`
-	Password           string              `json:"-"`
-	Picture 		   string			   `json:"picture"`
+	ID       uint   `gorm:"primaryKey;autoIncrement:true" json:id`
+	Username string `gorm:"unique;not null" json:username`
+	Email    string `gorm:"unique;not null" json:"email"`
+	Password string `json:"-"`
+	Picture  string `json:"picture"`
 }
 
 type LoginForm struct {

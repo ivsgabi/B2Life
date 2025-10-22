@@ -1,10 +1,10 @@
 package main
 
 import (
-	"log"
 	"b2life/internal/db"
 	"b2life/middlewares"
 	"b2life/routes"
+	"log"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
