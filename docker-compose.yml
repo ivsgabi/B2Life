@@ -27,7 +27,7 @@ services:
       - backend_network
 
   adminer:
-    container_name: database-monitoring
+    container_name: database-monitor
     image: adminer
     restart: always
     ports:
@@ -39,9 +39,9 @@ services:
   
   web:
     container_name: b2life-front
-    build: frontend
+    build: front_web
     env_file: 
-     - frontend/.env
+     - front_web/.env
     ports:
      - "3000:3000"
     depends_on:
